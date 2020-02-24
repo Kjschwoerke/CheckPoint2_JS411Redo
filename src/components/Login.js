@@ -30,7 +30,7 @@ class Login extends Component {
       console.log("this is the cookie in the logIn.js file at the render" + document.cookie)
     return (
       <div className="App">
-        <Container maxWidth="sm">
+        <Container className="login-form-container" maxWidth="sm">
           <form className="login-form" onSubmit={this.login}>
             <TextField
               required
@@ -52,6 +52,7 @@ class Login extends Component {
               variant="contained"
               color="primary">Login</Button>
           </form>
+          <div>Please log in to add or remove businesses</div>
         </Container>
       </div>
     );

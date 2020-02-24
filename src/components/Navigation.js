@@ -14,6 +14,9 @@ const Navigation = () => {
                     <Typography variant="h6" style={{ flexGrow: "1" }}>
                     Small Business App.com
                     </Typography>
+                    <div className="nav-list-container-loggedIn">
+                        You are currently logged in
+                    </div>
                     <ul className="nav-list">
                         <li className="nav-list-item">
                             <Link to="/">Home</Link>

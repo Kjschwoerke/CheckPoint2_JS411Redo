@@ -2,10 +2,6 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
-const logOut = () => {
-    document.cookie = "loggedIn=";
-}
-
 const Navigation = () => {
     let loggedIn = document.cookie
     console.log("in navigation:" + loggedIn)

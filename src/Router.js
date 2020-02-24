@@ -12,6 +12,7 @@ const checkAuth = () => {
     return cookies["loggedIn"] ? true : false
 }
 
+console.log("this is the cookie in the router.js file: " + checkAuth())
 
 const ProtectedRoute = ({component: Component, ...rest}) => {
     return (

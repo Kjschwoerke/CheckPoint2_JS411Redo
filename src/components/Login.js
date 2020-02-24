@@ -27,6 +27,7 @@ class Login extends Component {
   }
 
   render() {
+      console.log("this is the cookie in the logIn.js file at the render" + document.cookie)
     return (
       <div className="App">
         <Container maxWidth="sm">

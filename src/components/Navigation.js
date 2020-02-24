@@ -2,6 +2,10 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
+const logOut = () => {
+    document.cookie = "loggedIn=";
+}
+
 const Navigation = () => {
     let loggedIn = document.cookie
     console.log("in navigation:" + loggedIn)
@@ -25,7 +29,10 @@ const Navigation = () => {
                             <Link to="/dashboard">Dasboard</Link>
                         </li>
                         <li className="nav-list-item">
-                            <Link to="/">Log Out</Link>
+                            <Link onClick={() => {
+                            document.cookie = "loggedIn="
+                            window.location.replace("/login")
+                        }} to="/">Log Out</Link>
                         </li>
                     </ul>
                 </Toolbar>

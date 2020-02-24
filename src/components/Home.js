@@ -11,9 +11,9 @@ const Home = (props) => {
                     <CardContent className="text-gray">
                         <span>{business.name.toUpperCase()}</span>
                         <ul>
-                        <li>Miles per Gallon: {business["description"]}</li>
-                        <li>Cylinders: {business["address"]}</li>
-                        <li>Horsepower: {business["hours"]}</li>
+                        <li>Description: {business["description"]}</li>
+                        <li>Address: {business["address"]}</li>
+                        <li>Hours: {business["hours"]}</li>
                         </ul>
                     </CardContent>
                     <Divider />

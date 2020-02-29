@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Dashboard from '../components/Dashboard'
+import Navigation from '../components/Navigation'
 import { removeBusiness } from '../redux/actions'
 
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation)

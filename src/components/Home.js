@@ -9,8 +9,8 @@ const Home = (props) => {
             {props.businesses.map((business, idx) => (
                 <Card key={idx} className="card">
                     <CardContent className="text-gray">
-                        <span>{business.name.toUpperCase()}</span>
-                        <ul>
+                    <Link to={`/business/${business.id}`}><span>{business.name.toUpperCase()}</span></Link>
+                        <ul className="businessListHome">
                         <li>Description: {business["description"]}</li>
                         <li>Address: {business["address"]}</li>
                         <li>Hours: {business["hours"]}</li>
@@ -18,7 +18,6 @@ const Home = (props) => {
                     </CardContent>
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>
-                        <Link to={`/business/${business.id}`}>See More Details</Link>
                     </CardActions>
                 </Card>
             ))}

@@ -19,8 +19,6 @@ class Login extends Component {
 
   login = (e) => {
     e.preventDefault()
-    // set cookie here
-    // set loggedIn = true and max-age = 60*1000 (one minute)
     document.cookie = "loggedIn=true; max-age=60*1000"
 
     window.location.replace("/dashboard")
@@ -50,7 +48,7 @@ class Login extends Component {
               type="submit"
               className="login-button"
               variant="contained"
-              color="primary">Login</Button>
+              style={{background:'lightgrey'}, {margin: '10px 0 0'}}>Login</Button>
           </form>
           <div>Please log in to add or remove businesses</div>
         </Container>

@@ -28,3 +28,21 @@
   text-decoration: none;
   color: white;
 }
+
+.nav-list-container-loggedIn {
+  margin: 0;
+  width: 100vw;
+  background: lightgray;
+  padding: .5em 1em;
+}
+
+li {
+  list-style: none;
+}
+
+.businessListHome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

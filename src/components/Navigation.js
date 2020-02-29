@@ -2,27 +2,28 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
-const Navigation = () => {
+
+const Navigation = (props) => {
+    console.log("this is props in navigation components: " + props.user.username)
+
     let loggedIn = document.cookie
     console.log("in navigation:" + loggedIn)
     if (loggedIn == 'loggedIn=true'){
         return (
-            <AppBar position="relative">
+            <>
+            <AppBar style={{background:'green'}} position="relative">
                 <Toolbar>
                     <IconButton color="inherit">
                     </IconButton>
                     <Typography variant="h6" style={{ flexGrow: "1" }}>
-                    Small Business App.com
+                    Austin Small Business
                     </Typography>
-                    <div className="nav-list-container-loggedIn">
-                        You are currently logged in
-                    </div>
                     <ul className="nav-list">
                         <li className="nav-list-item">
-                            <Link to="/">Home</Link>
+                            <Link to="/">Listings</Link>
                         </li>
                         <li className="nav-list-item">
-                            <Link to="/dashboard">Dasboard</Link>
+                            <Link to="/dashboard">Add/Delete</Link>
                         </li>
                         <li className="nav-list-item">
                             <Link onClick={() => {
@@ -33,22 +34,24 @@ const Navigation = () => {
                     </ul>
                 </Toolbar>
             </AppBar>
+
+            <div className="nav-list-container-loggedIn">
+               logged in as: {props.user.username}
+            </div>
+        </>
         )
     } else {
         return (
-            <AppBar position="relative">
+            <AppBar style={{background:'green'}} position="relative">
                 <Toolbar>
                     <IconButton color="inherit">
                     </IconButton>
                     <Typography variant="h6" style={{ flexGrow: "1" }}>
-                        Small Business App.com
+                    Austin Small Business
                     </Typography>
                     <ul className="nav-list">
                         <li className="nav-list-item">
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li className="nav-list-item">
-                            <Link to="/dashboard">Dasboard</Link>
+                            <Link to="/">Listings</Link>
                         </li>
                         <li className="nav-list-item">
                             <Link to="/login">Log In</Link>

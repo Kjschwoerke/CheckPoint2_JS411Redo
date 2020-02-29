@@ -5,6 +5,7 @@ import Business from './containers/Business'
 import Dashboard from './containers/Dashboard'
 import Login from './components/Login.js'
 import cookie from 'cookie'
+import Navigation from "../src/containers/Navigation"
 
 
 const checkAuth = () => {
@@ -29,12 +30,15 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 
 const Router = () => {
     return (
+        <>
+        <Navigation />
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/business/:id" component={Business} />
             <Route path="/login" component={Login} />
             <ProtectedRoute path="/dashboard" component={Dashboard} />
         </Switch>
+        </>
     );
 };
 

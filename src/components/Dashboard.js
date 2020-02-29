@@ -10,11 +10,12 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete'
 import Total from '../containers/Total'
 import AddBusiness from '../containers/AddBusiness'
+
  
 const Dashboard = (props) => {
+    
     return (
         <Container maxWidth="lg" className="business-container">
-            <h4>Welcome, {props.user.username}</h4>
             <div className="flex-container">
                 <Total />
                 <AddBusiness businessTotal={props.businesses.length} />

@@ -28,7 +28,6 @@ const Dashboard = (props) => {
                         <TableCell>Description</TableCell>
                         <TableCell>Address</TableCell>
                         <TableCell>Hours</TableCell>
-                        <TableCell>Delete</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -41,12 +40,6 @@ const Dashboard = (props) => {
                         <TableCell>{business["description"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>
                         <TableCell>{business["hours"]}</TableCell>
-                        <TableCell>
-                            <DeleteIcon
-                                // add onClick method here
-                                onClick={() => props.removeBusiness(idx)}
-                                className="icon text-red" />
-                        </TableCell>
                     </TableRow>
                 ))}
                 </TableBody>

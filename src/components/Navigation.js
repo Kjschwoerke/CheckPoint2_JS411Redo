@@ -23,7 +23,7 @@ const Navigation = (props) => {
                             <Link to="/">Listings</Link>
                         </li>
                         <li className="nav-list-item">
-                            <Link to="/dashboard">Add/Delete</Link>
+                            <Link to="/dashboard">Add Business</Link>
                         </li>
                         <li className="nav-list-item">
                             <Link onClick={() => {

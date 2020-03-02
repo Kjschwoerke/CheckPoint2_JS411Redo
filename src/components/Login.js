@@ -21,7 +21,7 @@ class Login extends Component {
     e.preventDefault()
     document.cookie = "loggedIn=true; max-age=60*1000"
 
-    window.location.replace("/dashboard")
+    window.location.replace("/")
   }
 
   render() {

@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import Dashboard from '../components/Dashboard'
-import { removeBusiness } from '../redux/actions'
 
 
 const mapStateToProps = (state) => {
@@ -10,10 +9,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        removeBusiness: (index) => dispatch(removeBusiness(index))
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

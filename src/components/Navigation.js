@@ -27,19 +27,31 @@ const Navigation = (props) => {
                                     <Link to="/dashboard">Add Business</Link>
                                 </li>
                             )}
+                    {loggedIn == 'loggedIn=true' ? (
                         <li className="nav-list-item">
                             <Link onClick={() => {
                             document.cookie = "loggedIn="
                             window.location.replace("/login")
-                        }} to="/">Log Out</Link>
+                            }} to="/">Log Out</Link>
                         </li>
+                    ):(
+                        <li className="nav-list-item">
+                            <Link onClick={() => {
+                            document.cookie = "loggedIn="
+                            window.location.replace("/login")
+                            }} to="/login">Log In</Link>
+                        </li>
+                    )}
+                        
                     </ul>
                 </Toolbar>
             </AppBar>
 
-            <div className="nav-list-container-loggedIn">
-               logged in as: {props.user.username}
-            </div>
+            {loggedIn == 'loggedIn=true' && (
+                                <div className="nav-list-container-loggedIn">
+                                    logged in as: {props.user.username}
+                                </div>
+                            )}
         </>
         )
     } 

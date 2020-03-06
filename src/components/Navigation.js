@@ -22,11 +22,11 @@ const Navigation = (props) => {
                         <li className="nav-list-item">
                             <Link to="/">Listings</Link>
                         </li>
-                            {loggedIn == 'loggedIn=true' && (
+                    {loggedIn == 'loggedIn=true' && (
                                 <li className="nav-list-item">
                                     <Link to="/dashboard">Add Business</Link>
                                 </li>
-                            )}
+                    )}
                     {loggedIn == 'loggedIn=true' ? (
                         <li className="nav-list-item">
                             <Link onClick={() => {

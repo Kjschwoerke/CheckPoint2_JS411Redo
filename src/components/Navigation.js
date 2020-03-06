@@ -8,7 +8,7 @@ const Navigation = (props) => {
 
     let loggedIn = document.cookie
     console.log("in navigation:" + loggedIn)
-    if (loggedIn == 'loggedIn=true'){
+ 
         return (
             <>
             <AppBar style={{background:'green'}} position="relative">
@@ -22,9 +22,11 @@ const Navigation = (props) => {
                         <li className="nav-list-item">
                             <Link to="/">Listings</Link>
                         </li>
-                        <li className="nav-list-item">
-                            <Link to="/dashboard">Add Business</Link>
-                        </li>
+                            {loggedIn == 'loggedIn=true' && (
+                                <li className="nav-list-item">
+                                    <Link to="/dashboard">Add Business</Link>
+                                </li>
+                            )}
                         <li className="nav-list-item">
                             <Link onClick={() => {
                             document.cookie = "loggedIn="
@@ -40,29 +42,6 @@ const Navigation = (props) => {
             </div>
         </>
         )
-    } else {
-        return (
-            <AppBar style={{background:'green'}} position="relative">
-                <Toolbar>
-                    <IconButton color="inherit">
-                    </IconButton>
-                    <Typography variant="h6" style={{ flexGrow: "1" }}>
-                    Austin Small Business
-                    </Typography>
-                    <ul className="nav-list">
-                        <li className="nav-list-item">
-                            <Link to="/">Listings</Link>
-                        </li>
-                        <li className="nav-list-item">
-                            <Link to="/login">Log In</Link>
-                        </li>
-                    </ul>
-                </Toolbar>
-            </AppBar>
-        )
-
-    }
-    
-}
+    } 
 
 export default Navigation
